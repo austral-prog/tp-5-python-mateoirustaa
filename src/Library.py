@@ -1,3 +1,5 @@
+import self
+
 from src.Book import Book
 from src.User import User
 from typing import List, Tuple
@@ -75,7 +77,7 @@ class Library:
     # Utils
     def add_user(self, dni: int, name: str) -> None:
         for user in self.__users:
-            if user.get_dni() == dni:
+            if user.get_dni() == str(dni):  # Convert dni to str for comparison
                 pass
-        usuario: User = User(dni, name)
+        usuario: User = User(str(dni), name)  # Convert dni to str for User constructor
         self.__users.append(usuario)
