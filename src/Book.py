@@ -1,5 +1,4 @@
-# from typing import Self
-
+from typing import Any
 
 class Book:
     def __init__(self, isbn: str, title: str, author: str, available: bool = True, checkout_num: int = 0):
@@ -38,6 +37,7 @@ class Book:
     def __str__(self) -> str:
         return f"ISBN: {self.__isbn}, Title: {self.__title}, Author: {self.__author}"
 
-    def __eq__(self, other) -> bool:
-        if isinstance(other, self.__class__):
+    def __eq__(self, other: Any) -> bool:
+        if isinstance(other, Book):
             return self.__isbn == other.__isbn
+        return False
