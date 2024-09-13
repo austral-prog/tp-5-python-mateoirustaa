@@ -28,9 +28,11 @@ class Book:
     # Setters
     def set_available(self, available: bool) -> None:
         self.__available = available
+        return
 
     def increment_checkout_num(self) -> None:
         self.__checkout_num += 1
+        return
 
     # Utils
     def __str__(self) -> str:
