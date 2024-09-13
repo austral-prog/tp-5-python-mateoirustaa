@@ -1,8 +1,7 @@
-import self
+from typing import List, Tuple
 
 from src.Book import Book
 from src.User import User
-from typing import List, Tuple
 
 
 class Library:
